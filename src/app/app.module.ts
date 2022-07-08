@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TopNavigationComponent } from './navigation/top-navigation/top-navigation.component';
@@ -13,9 +14,11 @@ import { ViewEmployeeComponent } from './employee/view-employee/view-employee.co
 import { UpdateEmployeeComponent } from './employee/update-employee/update-employee.component';
 import { DeleteEmployeeComponent } from './employee/delete-employee/delete-employee.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+
     HeaderComponent,
     FooterComponent,
     TopNavigationComponent,
@@ -25,6 +28,7 @@ import { DeleteEmployeeComponent } from './employee/delete-employee/delete-emplo
     ViewEmployeeComponent,
     UpdateEmployeeComponent,
     DeleteEmployeeComponent
+
   ],
   imports: [
     BrowserModule,
