@@ -12,6 +12,11 @@ import { CreateEmployeeComponent } from './employee/create-employee/create-emplo
 import { ViewEmployeeComponent } from './employee/view-employee/view-employee.component';
 import { UpdateEmployeeComponent } from './employee/update-employee/update-employee.component';
 import { DeleteEmployeeComponent } from './employee/delete-employee/delete-employee.component';
+import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeeService } from './service/EmployeeService';
+
+
 
 @NgModule({
   declarations: [
@@ -24,13 +29,15 @@ import { DeleteEmployeeComponent } from './employee/delete-employee/delete-emplo
     CreateEmployeeComponent,
     ViewEmployeeComponent,
     UpdateEmployeeComponent,
-    DeleteEmployeeComponent
+    DeleteEmployeeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
