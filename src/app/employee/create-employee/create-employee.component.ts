@@ -9,7 +9,7 @@ import { EmployeeService } from 'src/app/service/EmployeeService';
 })
 export class CreateEmployeeComponent implements OnInit {
   employee:any;
-  constructor(private employeeService : EmployeeService) { }
+  constructor(private createEmployeeService : EmployeeService) { }
 
   ngOnInit(): void {
     console.log("create employee InIt method");
@@ -39,8 +39,10 @@ export class CreateEmployeeComponent implements OnInit {
   this.employee.commisionPct=;
   this.employee.departmentId=;*/
 
-   const Observable = this.employeeService.createEmployee(this.employee);
+   const Observable = this.createEmployeeService.createEmployee(this.employee);
    Observable.subscribe();
   }
+
+  ngSubmit():void{}
 
 }

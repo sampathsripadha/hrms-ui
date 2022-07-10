@@ -1,3 +1,4 @@
+import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { catchError, observable } from 'rxjs';
 import { EmployeeService } from 'src/app/service/EmployeeService';
@@ -9,17 +10,23 @@ import { EmployeeService } from 'src/app/service/EmployeeService';
 })
 export class ViewEmployeeComponent implements OnInit {
   employees:any;
+  message: any;
 
-  constructor(private employeeService:EmployeeService) { }
+  constructor(private viewEmployeeService:EmployeeService) { }
 
   ngOnInit(): void {
-    const observable = this.employeeService.getEmployee();
+    const observable = this.viewEmployeeService.getEmployee();
     observable.subscribe(
       data => {
         if (data.status=200){
             this.employees=data.result;
+            console.log(data.result);
         }
-        console.log(data.result);
+        else {
+          this.message=error.message;
+          console.error(error);
+        }
+        
 
       }
     );

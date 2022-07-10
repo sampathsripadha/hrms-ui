@@ -12,4 +12,7 @@ baseUrl:string="http://localhost:6010/employees/";
   createEmployee(employee:any):Observable<any>{
       return this.http.post<any>(this.baseUrl, employee);
   }
+  getDepartment():Observable<any>{
+    return this.http.get<any>(this.baseUrl);
+  }
 }
