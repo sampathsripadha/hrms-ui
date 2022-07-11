@@ -13,6 +13,7 @@ import { CreateEmployeeComponent } from './employee/create-employee/create-emplo
 import { ViewEmployeeComponent } from './employee/view-employee/view-employee.component';
 import { UpdateEmployeeComponent } from './employee/update-employee/update-employee.component';
 import { DeleteEmployeeComponent } from './employee/delete-employee/delete-employee.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DeleteEmployeeComponent } from './employee/delete-employee/delete-emplo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
