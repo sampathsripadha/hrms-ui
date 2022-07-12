@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +14,10 @@ import { DeleteEmployeeComponent } from './employee/delete-employee/delete-emplo
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './service/EmployeeService';
+import { FormsModule } from '@angular/forms';
+import { AboutusComponent } from './navigation/bottom-navigation/aboutus/aboutus.component';
+import { ContactComponent } from './navigation/bottom-navigation/contact/contact.component'
+
 
 
 
@@ -30,12 +33,17 @@ import { EmployeeService } from './service/EmployeeService';
     ViewEmployeeComponent,
     UpdateEmployeeComponent,
     DeleteEmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    AboutusComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    
+
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

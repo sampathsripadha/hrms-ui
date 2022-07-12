@@ -1,4 +1,4 @@
-import { error } from '@angular/compiler/src/util';
+//import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { catchError, observable } from 'rxjs';
 import { EmployeeService } from 'src/app/service/EmployeeService';
@@ -23,8 +23,8 @@ export class ViewEmployeeComponent implements OnInit {
             console.log(data.result);
         }
         else {
-          this.message=error.message;
-          console.error(error);
+          this.message=data.message;
+          //console.error(error);
         }
         
 
