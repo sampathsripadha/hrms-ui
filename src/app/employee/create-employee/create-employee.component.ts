@@ -10,6 +10,7 @@ export class CreateEmployeeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  consol.log("create-employee");
   }
 
 }
